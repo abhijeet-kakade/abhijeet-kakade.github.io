@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* 
+ * TechGuru Games - Premium Dark Theme
+ * Version: 3.2.1
+ * Author: Abhijeet Kakade
+ * Copyright 2025 - TechGuru Games
+ * 
+ * This CSS leverages advanced techniques including:
+ * - CSS custom properties with fallbacks
+ * - Hardware-accelerated animations
+ * - Cubic-bezier fine-tuned transitions
+ * - Advanced pseudo-element usage
+ * - Container queries (where supported)
+ * - Logical properties for RTL support
+ */
+
+:root {
+    /* Core Color System - Dark Theme */
+    --primary-hue: 260;
+    --accent-hue: 165;
+    
+    /* Primary Colors */
+    --primary-100: hsl(var(--primary-hue), 90%, 90%);
+    --primary-200: hsl(var(--primary-hue), 85%, 80%);
+    --primary-300: hsl(var(--primary-hue), 80%, 70%);
+    --primary-400: hsl(var(--primary-hue), 75%, 60%);
+    --primary-500: hsl(var(--primary-hue), 80%, 50%);  /* Main primary color */
+    --primary-600: hsl(var(--primary-hue), 85%, 40%);
+    --primary-700: hsl(var(--primary-hue), 90%, 30%);
+    --primary-800: hsl(var(--primary-hue), 95%, 20%);
+    --primary-900: hsl(var(--primary-hue), 100%, 10%);
+    
+    /* Accent Colors */
+    --accent-100: hsl(var(--accent-hue), 90%, 90%);
+    --accent-200: hsl(var(--accent-hue), 85%, 80%);
+    --accent-300: hsl(var(--accent-hue), 80%, 70%);
+    --accent-400: hsl(var(--accent-hue), 75%, 60%);
+    --accent-500: hsl(var(--accent-hue), 80%, 50%);  /* Main accent color */
+    --accent-600: hsl(var(--accent-hue), 85%, 40%);
+    --accent-700: hsl(var(--accent-hue), 90%, 30%);
+    --accent-800: hsl(var(--accent-hue), 95%, 20%);
+    --accent-900: hsl(var(--accent-hue), 100%, 10%);
+    
+    /* Neutral Colors */
+    --neutral-50: hsl(220, 20%, 98%);
+    --neutral-100: hsl(220, 15%, 95%);
+    --neutral-200: hsl(220, 15%, 90%);
+    --neutral-300: hsl(220, 10%, 80%);
+    --neutral-400: hsl(220, 10%, 70%);
+    --neutral-500: hsl(220, 10%, 60%);
+    --neutral-600: hsl(220, 10%, 50%);
+    --neutral-700: hsl(220, 10%, 30%);
+    --neutral-800: hsl(220, 15%, 15%);
+    --neutral-900: hsl(220, 20%, 10%);
+    --neutral-950: hsl(220, 30%, 6%);
+    
+    /* Semantic Colors */
+    --success: hsl(142, 70%, 45%);
+    --warning: hsl(45, 100%, 60%);
+    --error: hsl(354, 70%, 54%);
+    --info: hsl(200, 70%, 50%);
+    
+    /* Component Colors */
+    --surface-0: hsl(220, 25%, 5%);
+    --surface-1: hsl(220, 20%, 8%);
+    --surface-2: hsl(220, 15%, 12%);
+    --surface-3: hsl(220, 10%, 15%);
+    --surface-4: hsl(220, 10%, 18%);
+    
+    /* Typography */
+    --text-primary: hsl(220, 15%, 95%);
+    --text-secondary: hsl(220, 10%, 80%);
+    --text-tertiary: hsl(220, 10%, 65%);
+    --text-disabled: hsl(220, 10%, 40%);
+    
+    --heading-font: 'Rajdhani', sans-serif;
+    --body-font: 'Montserrat', sans-serif;
+    
+    /* Borders & Shadows */
+    --border-thin: 1px;
+    --border-regular: 2px;
+    --border-thick: 4px;
+    
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.35);
+    
+    /* Animation Timing */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --ease-in-out-quad: cubic-bezier(0.45, 0, 0.55, 1);
+    
+    /* Spacing System */
+    --space-unit: 8px;
+    --space-xs: calc(0.5 * var(--space-unit));
+    --space-sm: calc(1 * var(--space-unit));
+    --space-md: calc(2 * var(--space-unit));
+    --space-lg: calc(3 * var(--space-unit));
+    --space-xl: calc(4 * var(--space-unit));
+    --space-2xl: calc(6 * var(--space-unit));
+    --space-3xl: calc(8 * var(--space-unit));
+    --space-4xl: calc(10 * var(--space-unit));
+    
+    /* Layout */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1536px;
+    
+    /* Z-index layers */
+    --z-below: -1;
+    --z-normal: 0;
+    --z-above: 1;
+    --z-floating: 10;
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal: 400;
+    --z-popover: 500;
+    --z-toast: 600;
+    --z-tooltip: 700;
+    --z-highest: 9999;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+    
+    /* Animation Duration */
+    --duration-instant: 0ms;
+    --duration-fast: 150ms;
+    --duration-normal: 300ms;
+    --duration-slow: 500ms;
+    --duration-slower: 800ms;
+    --duration-slowest: 1200ms;
+}
+
+/* Advanced Browser Resets */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:focus {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 2px;
+}
+
+::selection {
+    background-color: hsla(var(--primary-hue), 80%, 50%, 0.3);
+    color: var(--text-primary);
+}
+
+html {
+    font-size: 62.5%; /* 10px base for easier rem calculations */
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    color-scheme: dark;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 1.6rem;
+    background: var(--surface-0);
+    color: var(--text-primary);
+    text-rendering: optimizeSpeed;
+    transition: background-color var(--duration-normal) var(--ease-out-quart);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ---------------------------------- */
+/* Section Styling                    */
+/* ---------------------------------- */
+.section-title {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+    position: relative;
+}
+
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section-title h2::before,
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    bottom: -10px;
+    border-radius: var(--radius-full);
+}
+
+.section-title h2::before {
+    width: 80px;
+    background: linear-gradient(90deg, var(--primary-500), var(--accent-500));
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title h2::after {
+    width: 10px;
+    background: var(--primary-300);
+    left: 50%;
+    margin-left: -45px;
+    bottom: -16px;
+}
+
+.section-title p {
+    font-size: 1.8rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: var(--space-md) auto 0;
+}
+
+.section-title .highlight {
+    color: var(--primary-400);
+}
+
+.section-divider {
+    height: 100px;
+    background: linear-gradient(180deg, var(--surface-2) 0%, var(--surface-0) 100%);
+    position: relative;
+    margin-top: -100px;
+    z-index: var(--z-below);
+}
+
+/* ---------------------------------- */
+/* Games Section                     */
+/* ---------------------------------- */
+#games {
+    background-color: var(--surface-0);
+    position: relative;
+    overflow: hidden;
+}
+
+.techguru-games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.game-card {
+    background: var(--surface-2);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--duration-slow) var(--ease-out-expo);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}  
+
+.game-card img {        
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: all var(--duration-slow) var(--ease-out-expo);
+}
+
+.game-card:hover img {
+    transform: scale(1.05);
+}
+
+.game-content {
+    padding: var(--space-md);
+}
+
+.game-card h3 {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+    position: relative;
+    padding-bottom: var(--space-xs);
+    font-family: var(--heading-font);
+    color: var(--primary-300);
+}                   
+
+.game-card h3::after {
+    content: '';
+    position: absolute;
+    width: 40px;    
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-500), var(--accent-500));
+    bottom: 0;          
+    left: 0;
+    border-radius: var(--radius-full);            
+}
+
+.game-card p {
+    margin-bottom: var(--space-md);
+    color: var(--text-secondary);
+}
+
+/* Add styles for arrow buttons */
+.arrow-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.arrow-button {
+    background: var(--surface-3);
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    padding: var(--space-sm) var(--space-md);
+    font-family: var(--body-font);
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-out-quart);
+}
+
+.arrow-button:hover {
+    background: var(--surface-4);
+    color: var(--text-primary);
+}
+
+/* Fix for the register button */
+.game-card .btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: var(--space-md) var(--space-2xl);
+    background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform var(--duration-normal) var(--ease-out-quart),
+                box-shadow var(--duration-normal) var(--ease-out-quart);
+    align-self: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.game-card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.game-card .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.game-card .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent);
+    transition: left 0.7s var(--ease-out-expo);
+}
+
+.game-card .btn:hover::before {
+    left: 100%;
+}
+
+/* Container fixes */
+.container {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+}
+
+.game-content p {
+    margin-bottom: var(--space-md);
+    color: var(--text-secondary);
+}
+
+.game-content ul {
+    list-style: none;
+    margin-bottom: var(--space-md);
+}
+
+.game-content li {
+    position: relative;
+    padding-left: var(--space-xl);
+    margin-bottom: var(--space-sm);
+}
+
+.game-content li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--primary-500);
+}
+
+.game-content .btn {
+    padding: var(--space-md) var(--space-2xl);
+    background: linear-gradient(135deg, var(--accent-500), var(--accent-600));
+    color: white;
+    box-shadow: 0 4px 15px rgba(var(--accent-hue), 80%, 40%, 0.4);
+    transition: transform var(--duration-normal) var(--ease-out-quart),
+                box-shadow var(--duration-normal) var(--ease-out-quart);
+}
+
+.game-content .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(var(--accent-hue), 80%, 40%, 0.6);
+}
+
+.game-content .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(var(--accent-hue), 80%, 40%, 0.4);
+}
+
+.game-content .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent);
+    transition: left 0.7s var(--ease-out-expo);
+}
+
+.game-content .btn:hover::before {
+    left: 100%;
+}
+/* ---------------------------------- */
+/* Media Queries                     */
+/* ---------------------------------- */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .techguru-games {
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .techguru-games {
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .techguru-games {
+        grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .techguru-games {
+        grid-template-columns: repeat(auto-fit, minmax(540px, 1fr));
+    }
+}
+
+/* ---------------------------------- */
+/* Footer Styling                     */
+/* ---------------------------------- */
+
+footer {
+    background: var(--surface-2);
+    color: var(--text-secondary);
+    padding: var(--space-xl) 0;
+    text-align: center;
+    font-size: 1.4rem;
+    position: relative;
+    z-index: var(--z-above);
+}
+
+footer a {
+    color: var(--primary-500);
+    text-decoration: none;
+    transition: color var(--duration-normal) var(--ease-out-quart);
+}
+
+footer a:hover {
+    color: var(--primary-400);
+}    
+
+footer p {
+    margin-bottom: var(--space-md);
+}    
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+footer .social-links a {
+    font-size: 2.4rem;
+}
