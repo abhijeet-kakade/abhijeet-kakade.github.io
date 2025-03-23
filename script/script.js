@@ -75,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
 function getRulesContent(eventName) {
   switch (eventName) {
     case "project":
-      return `• Team size: 2-4 members
-• Project must be original
-• Live demo required
-• Tech stack: Any modern framework
-• Documentation mandatory`;
+      return `• Inspiration: Present impactful ideas via PPT or soft copy.
+      • Brainwave: Any software/hardware project with physical implementation allowed.
+      • Rules: Team size 2-4, original project, live demo, any tech stack, documentation required.
+      
+      `;
     case "coding":
       return `• Individual participation only
 • Three rounds: MCQ, Coding, DSA
@@ -117,26 +117,26 @@ function getRulesContent(eventName) {
 
 function getTimeDateContent(eventName) {
   const dates = {
-    project: "March 15, 2024",
-    coding: "March 16, 2024",
-    neoncricket: "March 17, 2024",
-    roadies: "March 18, 2024",
-    aiprompting: "March 19, 2024",
-    stumbleguys: "March 20, 2024",
+    project: "March 28, 2025",
+    coding: "March 28, 2025",
+    neoncricket: "March 29, 2025",
+    roadies: "March 29, 2025",
+    aiprompting: "March 29, 2025",
+    stumbleguys: "March 28, 2025",
   };
 
   return `Date: ${dates[eventName]}
-Time: 10:00 AM - 4:00 PM
-Registration Deadline: March 10
+Time: 9:00 AM - 4:00 PM
 Venue: Check Lab Assignment`;
 }
 
+// ############################## LABS CONTENT ############################## Kal logic dhekte 
 function getLabsContent(eventName) {
   const venues = {
-    project: "Innovation Lab",
+    project: "Library",
     coding: "Computer Lab 2",
-    neoncricket: "Indoor Sports Room",
-    roadies: "College Ground",
+    neoncricket: "LCS Hall",
+    roadies: "Behind Canteen",
     aiprompting: "AI Research Lab",
     stumbleguys: "Gaming Arena",
   };
