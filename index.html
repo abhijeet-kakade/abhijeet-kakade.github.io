@@ -1,342 +1,928 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>COSA - Computer Student Association</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
-</head>
-
-<body>
+    
+    <!-- Add preconnect for external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <!-- Optimize Font Awesome loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+          integrity="sha512-..." 
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    
+    <!-- Load critical CSS first -->
+    <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+    
+    <style>
+        .fa-brands, .fab{
+            color: rgb(0, 0, 0);
+        }
+    </style>
+  </head>
+  <body>
+    <div class="overlay" id="overlay"></div>
     <!-- Header and Navigation -->
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo" >
-                    <img src="https://res.cloudinary.com/dxomzjhhj/image/upload/v1742632197/u4akbygeyarqte5d9tsw.png" alt="COSA Logo" class="logo-img">
-                    <a href="#hero">COSA</a>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <!-- <li><a href="#TechGuru_games.html">TechGuru</a></li> -->
-                    <li><a href="#kaushalya">Kaushalya 2024</a></li>
-                    <li><a href="#team">Our Team</a></li>
-                </ul>
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
+      <div class="container">
+        <nav>
+          <div class="logo-container">
+            <a href=""><img src="/assests/COSA Logo.png" width="150" height="50" alt="COSA Logo" loading="eager"></a>
+            <a href="#" class="logo">COSA</a>
+          </div>
+          <ul class="nav-links">
+            <button class="nav-close" aria-label="Close menu">
+              <i class="fas fa-times"></i>
+            </button>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="techguru.html">TechGuru</a></li>
+            <li><a href="code(16).html">Our Achievements</a></li>
+            <li><a href="#kaushalya">Kaushalya 2024</a></li>
+            <li><a href="#team">Our Team</a></li>
+          </ul>
+          <div class="hamburger">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container hero-content">
-            <h1>Computer Student Association</h1>
-            <p>Empowering students with technology and innovation since 2010</p>
-            <a href="TechGuru_games.html" class="btn">Register for TechGuru</a>
-        </div>
+    <section id="hero" class="hero hero-bg">
+      <div class="container">
+        <h1>Computer Student Association</h1>
+      
+        <a href="techguru.html" class="btn">Register for TechGuru</a>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About COSA</h2>
-                <p>Learn more about our vibrant community of tech enthusiasts</p>
-            </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://res.cloudinary.com/dxomzjhhj/image/upload/v1742710497/WhatsApp_Image_2025-03-23_at_11.24.43_ebe6af4f_i1s5yn.jpg" alt="COSA Team 2025">
-                </div>
-                <div class="about-text">
-                    <h3>Who We Are</h3>
-                    <p>The Computer Student Association (COSA) is a dynamic organization dedicated to promoting
-                        technological education, innovation, and networking opportunities for computer science students.
-                    </p>
-                    <p>Founded with the vision to bridge the gap between academic learning and industry requirements,
-                        COSA organizes various events, workshops, and competitions throughout the academic year to
-                        enhance the technical and soft skills of its members.</p>
-                    <p>Our team consists of passionate students who are committed to creating a collaborative
-                        environment where members can learn, grow, and excel in their areas of interest.</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>About COSA</h2>
         </div>
+        <div class="about-content">
+          <div class="about-img">
+            <img src="/assests/WhatsApp Image 2025-03-23 at 12.38.53_8cd9b325.jpg" alt="COSA Team 2025" loading="lazy" />
+          </div>
+          <div class="about-text">
+            <h3>Computer Engineering Student's Association</h3>
+            <h2>What we do</h2>
+            <p>The Computer Student Association (COSA) is a dynamic organization dedicated to promoting technological education, innovation, and networking opportunities for computer science students.
+
+Founded with the vision to bridge the gap between academic learning and industry requirements, COSA organizes various events, workshops, and competitions throughout the academic year to enhance the technical and soft skills of its members.
+
+Our team consists of passionate students who are committed to creating a collaborative environment where members can learn, grow, and excel in their areas of interest.</p>
+            <h4>Our Mission and Vision</h4>
+            <p>
+              An objective to inculcate Teamwork Spirit in students an
+              association of students was needed. The students were informed by
+              the HOD of Computer Department Mr. Sandeep Shukla and Mr. Pramod
+              Patil regarding the formation of a Computer Engineering Students
+              Association (COSA).
+            </p>
+
+            <h3>Vision</h3>
+            <p>
+              Established an association striving to provide platform for the
+              students to explore and boot their skills, knowledge and the
+              overall development of department and students by organizing
+              various events and activities.
+            </p>
+            <h3>Mission</h3>
+            <p>
+              To organize the Training Program, Seminars, Workshops on latest
+              technology to enhance the Technical Skill-Set of students. To organize the Technical, Non-Technical events to improve the
+              leadership quality among the students. To work in co-operation with all groups and associations who
+              share our aims. To organize Training Programs, Technical and Non-Technical
+              events which will help them for Placements. To motivate and encourage students to have more participation in
+              various events and activities.
+              To encourage students of the department to develop the Intra
+              Personal Skills like Self-Confidence, Commumication Skills,
+              Presentation Skills etc. To enrich and empower the minds of students by conducting
+            </p>
+
+            <div class="social-links">
+              <a href="https://www.instagram.com/cosa.gcoerc?igsh=YzI2YnFoOTVzd2Jy" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Kaushalya 2024 Section -->
     <section id="kaushalya" class="gallery">
-        <div class="container">
-            <div class="section-title">
-                <h2>Kaushalya 2024</h2>
-                <p>Relive the memories of our annual technical fest</p>
-            </div>
-            <div class="gallery-container">
-                <!-- Gallery Item 1 -->
-                <div class="gallery-item">
-                    <img src="https://res.cloudinary.com/dxomzjhhj/image/upload/v1742713369/IMG_20240229_112636_lbwwsy.jpg" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 2 -->
-                <div class="gallery-item">
-                    <img src="https://res.cloudinary.com/dxomzjhhj/image/upload/v1742713367/IMG_20240229_125017682_iiijnj.jpg" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 3 -->
-                <div class="gallery-item">
-                    <img src="https://res.cloudinary.com/dxomzjhhj/image/upload/v1742713367/IMG_20240229_123452397_HDR_val8jk.jpg" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 4 -->
-                <div class="gallery-item">
-                    <img src="https://res.cloudinary.com/dxomzjhhj/image/upload/v1742713370/IMG20240229095815_lqwvb9.jpg" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 5 -->
-                <div class="gallery-item">
-                    <img src="https://res.cloudinary.com/dxomzjhhj/image/upload/v1742713367/IMG_20240229_124504187_HDR_b2ogpt.jpg" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 6 -->
-                <div class="gallery-item">
-                    <img src="https://res.cloudinary.com/dxomzjhhj/image/upload/v1742713510/IMG_8884_fyktkw.jpg" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 7 -->
-                <div class="gallery-item">
-                    <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 8 -->
-                <div class="gallery-item">
-                    <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 9 -->
-                <div class="gallery-item">
-                    <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 10 -->
-                <div class="gallery-item">
-                    <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 11 -->
-                <div class="gallery-item">
-                    <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-
-                <!-- Gallery Item 12 -->
-                <div class="gallery-item">
-                    <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="view-gallery">
-                <a href="#" class="btn">View All Memories</a>
-            </div> -->
+      <div class="container">
+        <div class="section-title">
+          <h2>Kaushalya 2024</h2>
+          <p>Relive the memories of our annual technical fest</p>
         </div>
+        <div class="gallery-container">
+          <!-- Gallery Item 1 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 7 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 8 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 9 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 10 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 11 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+
+          <!-- Gallery Item 12 -->
+          <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Kaushalya 2024 Moment" loading="lazy" />
+            <div class="gallery-overlay">
+              <i class="fas fa-search-plus"></i>
+            </div>
+          </div>
+        </div>
+        <div class="view-gallery">
+          <a href="#" class="btn">View All Memories</a>
+        </div>
+      </div>
     </section>
 
     <!-- Team Section -->
     <section id="team" class="team">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Team</h2>
-                <p>Meet the dedicated individuals behind COSA 2025</p>
-            </div>
-
-            <!-- Faculty Members -->
-            <div class="team-category" style="text-align: center;">
-                <h3>Faculty Mentors</h3>
-            </div>
-            <div class="team-container">
-                <!-- HOD -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="https://engg.ggsf.edu.in/images/faculty/614ac7aace05c01.jpg" alt="HOD">
-                    </div>
-                    <div class="member-info">
-                        <h3>Mr. Sandeep G Shukla</h3>
-                        <span>Assistant Professor and HOD</span>
-                        <p>M.Tech I.T. , PhD (Pursuing).</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="mailto:sandeep.shukla@ggsf.edu.in"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Coordinator -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="https://engg.ggsf.edu.in/images/faculty/614aca984a2d8pramod_patil_co.jpg" alt="Coordinator">
-                    </div>
-                    <div class="member-info">
-                        <h3>Mr.Pramod C Patil</h3>
-                        <span>Assistant Professorr</span>
-                        <p>Facilitating student activities and providing mentorship.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="mailto:pramod.patil@ggsf.edu.in"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Executive Committee -->
-            <div class="team-category" style="text-align: center;">
-                <h3>Executive Committee</h3>
-            </div>
-            <div class="team-container">
-                <!-- President -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="/api/placeholder/400/400" alt="President">
-                    </div>
-                    <div class="member-info">
-                        <h3>Ankit Patel</h3>
-                        <span>President</span>
-                        <p>Leading COSA with innovative ideas and passion for technology.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Vice President -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="/api/placeholder/400/400" alt="Vice President">
-                    </div>
-                    <div class="member-info">
-                        <h3>Priya Singh</h3>
-                        <span>Vice President</span>
-                        <p>Organizing events with exceptional leadership skills.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Secretary -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="/api/placeholder/400/400" alt="Secretary">
-                    </div>
-                    <div class="member-info">
-                        <h3>Rahul Verma</h3>
-                        <span>Secretary</span>
-                        <p>Maintaining records and coordinating administrative tasks.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Treasurer -->
-                <div class="team-member">
-                    <div class="member-img">
-                        <img src="/api/placeholder/400/400" alt="Treasurer">
-                    </div>
-                    <div class="member-info">
-                        <h3>Prashant Kumar</h3>
-                        <span>Treasurer</span>
-                        <p>Ensuring financial stability and transparency.</p>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Team</h2>
+          <p>Meet the dedicated individuals behind COSA 2025</p>
         </div>
+
+        <!-- Faculty Members -->
+        <div class="team-category" style="text-align: center">
+          <h3>Faculty Mentors</h3>
         </div>
+        <div class="team-scroll-container">
+          <!-- Horizontal scroll -->
+          <!-- HOD -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="HOD" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Dr. Rajesh Kumar</h3>
+              <span>Head of Department</span>
+              <p>
+                Guiding the Computer Science department with over 20 years of
+                academic experience.
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coordinator -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Coordinator" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Prof. Amit Sharma</h3>
+              <span>COSA Coordinator</span>
+              <p>Facilitating student activities and providing mentorship.</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Committee Members -->
+        <div class="team-category" style="text-align: center">
+          <h3>Committee Members</h3>
+        </div>
+        <div class="team-scroll-container">
+          <!-- Horizontal scroll -->
+          <!-- President -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="President" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Ankit Patel</h3>
+              <span>President</span>
+              <p>
+                Leading COSA with innovative ideas and passion for technology.
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vice President -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Vice President" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Priya Singh</h3>
+              <span>Vice President</span>
+              <p>Organizing events with exceptional leadership skills.</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secretary -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Secretary" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Rahul Verma</h3>
+              <span>Secretary</span>
+              <p>Maintaining records and coordinating administrative tasks.</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Treasurer -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Treasurer" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Sneha Gupta</h3>
+              <span>Treasurer</span>
+              <p>Managing finances with precision and responsibility.</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 1 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Aarav Sharma</h3>
+              <span>Technical Head</span>
+              <p>Spearheading technical initiatives with expertise.</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Diya Kapoor</h3>
+              <span>Marketing Head</span>
+              <p>Crafting effective marketing strategies for COSA events.</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Aryan Mishra</h3>
+              <span>Event Coordinator</span>
+              <p>Ensuring seamless event execution with attention to detail.</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Member 4 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Siya Khanna</h3>
+              <span>Design Head</span>
+              <p>
+                Creating visually appealing designs for promotional materials.
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add additional team member cards below -->
+          <!-- Add more core members (adjust total number as needed) -->
+          <!-- Team Member 5 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Advik Reddy</h3>
+              <span>Social Media Manager</span>
+              <p>
+                Managing and creating Engaging content and promotions for
+                various social media plat
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 6 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Avni Joshi</h3>
+              <span>Web Master</span>
+              <p>managing full website</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 7 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Charu Tiwari</h3>
+              <span>Public Relation Manager</span>
+              <p>Build good relation between companies and club</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 8 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Ekansh Jha</h3>
+              <span>Cloud manager </span>
+              <p>All data of cloud</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 9 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Fatima Shaikh</h3>
+              <span>Sports manager</span>
+              <p>sports activities handle and organizing all</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 10 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Gazala Siddiqui</h3>
+              <span>Assistant sport manger</span>
+              <p>sports activities support and organizing all</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 11 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Harsh Sharma</h3>
+              <span>Event and Program Organiger </span>
+              <p>Organiging Events and support manager</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 12 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Ishita Tripathi</h3>
+              <span>Assistant Sport Manager</span>
+              <p>Organiging Events and support manager and support</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 13 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>janhvi Dixit</h3>
+              <span>Event mangager</span>
+              <p>managing all event and handling all</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 14 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Karishma</h3>
+              <span>Managining events</span>
+              <p>Assist and Organiging the event.</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 15 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>krishna chourasiya</h3>
+              <span>Event handle and manger </span>
+              <p>
+                assist in sports activity and managin other member and assign
+                task other memeber
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 16 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>kratika Tripathi</h3>
+              <span>Public Relations manager Assistant. </span>
+              <p>
+                Managing the member assistant relations of member and external
+                contacts and main communication
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 17 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Muskan Rathore</h3>
+              <span>Social activities </span>
+              <p>All function and festival of our</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 18 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>nikita sushani</h3>
+              <span>manage assistant</span>
+              <p>sports all activity</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 19 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>payal agrawal</h3>
+              <span>coding mange and events </span>
+              <p>
+                all technical solve problems. all events mange properly time .
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 20 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>pranshi jaiswal</h3>
+              <span>web handle </span>
+              <p>
+                proper working of website, website main all parts of problem
+                .website all features problem and handling properly
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 21 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>rani pal</h3>
+              <span
+                >Manger the activity of members, time mange coding part event
+                parts etc</span
+              >
+              <p>manage main work with coordination</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 22 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>ratnesh rajpoot</h3>
+              <span>manger of team code.and members etc.</span>
+              <p>all assist handle to help the members</p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 23 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>saloni jha</h3>
+              <span
+                >web events work,assistant handle web and manage to her work
+                website problems
+              </span>
+              <p>
+                all member are working to assist manage in problem all web
+                developer problems solving and she handled the members all
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 24 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Samarth agarwal</h3>
+              <span
+                >All types manage and solve probms coding side, project problems
+                time and etc</span
+              >
+              <p>
+                Coding related or other project solve assistant with seniors and
+                time is main management . Assistant all manage properly and the
+                time and code work
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 25 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Sanchi shrivastava</h3>
+              <span>Events manger etc,all manger works,etc </span>
+              <p>
+                assist for manage the coding assistant other the types off
+                works.
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 26 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>shashank Pandey</h3>
+              <span
+                >Assist every members solve assist web related parts member etc
+              </span>
+              <p>
+                Assistant problem website working related main members web parts
+                handle and the websites and the new data insert in properly .
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 27 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>sheetal Kushwaha</h3>
+              <span
+                >Every memebr and all functions organize and manger in activity
+                etc .
+              </span>
+              <p>
+                Event manage is very required properly time members website and
+                etc so am manage all assist in other seniors
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Team Member 28 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>srishty sharm</h3>
+              <span
+                >Project base or the base coding side related in properly member
+                manage
+              </span>
+              <p>
+                Assistant project side work, website and all the time activitys
+                solve all of members.
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Team Member 29 -->
+          <div class="team-member">
+            <div class="member-img">
+              <img src="/api/placeholder/400/400" alt="Core Member" loading="lazy" />
+            </div>
+            <div class="member-info">
+              <h3>Tanya Raghuwanshi</h3>
+              <span>manage web activities main all of you coding handle </span>
+              <p>
+                Website working and all of related problems new and code proper
+                or insert the web insert work all data or in database are
+                related problems and backend front work database handling
+              </p>
+              <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>About COSA</h3>
-                    <p>The Computer Student Association (COSA) is dedicated to empowering students with technology and innovation.</p>
-                    <p>Since 2010, we have been providing a platform for students to enhance their technical skills and network with industry professionals.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#hero">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#techguru">TechGuru</a></li>
-                        <li><a href="#kaushalya">Kaushalya 2024</a></li>
-                        <li><a href="#team">Our Team</a></li>
-                           <li><a href="#updates">Updates</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <div class="contact-info">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Computer Science Department, LNCT Bhopal</p>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <p>cosa@lnctbhopal.ac.in</p>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-phone"></i>
-                        <p>+91-9876543210</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>About COSA</h3>
+            <p>
+              The Computer Student Association (COSA) is dedicated to empowering
+              students with technology and innovation.
+            </p>
+            <p>
+              Since 2010, we have been providing a platform for students to
+              enhance their technical skills and network with industry
+              professionals.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#techguru">TechGuru</a></li>
+              <li><a href="#kaushalya">Kaushalya 2024</a></li>
+              <li><a href="#team">Our Team</a></li>
+              <li><a href="#updates">Updates</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <div class="contact-info">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Computer Science Department, LNCT Bhopal</p>
             </div>
-            <div class="copyright">
-                &copy; 2024 Computer Student Association. All rights reserved.
+            <div class="contact-info">
+              <i class="fas fa-envelope"></i>
+              <p>cosa@lnctbhopal.ac.in</p>
             </div>
+            <div class="contact-info">
+              <i class="fas fa-phone"></i>
+              <p>+91-9876543210</p>
+            </div>
+          </div>
         </div>
-    </footer>    
-</body> 
+        <div class="copyright">
+          &copy; 2024 Computer Student Association. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <div id="rules-popup" class="rules-popup">
+      <span class="close-button" onclick="closePopup()">&times;</span>
+      <div class="popup-content" id="popup-content">
+        <!-- Content will be dynamically loaded here -->
+      </div>
+    </div>
+
+    <script src="/script/script.js" defer></script>
+  </body>
+</html>
