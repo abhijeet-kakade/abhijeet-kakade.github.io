@@ -329,7 +329,7 @@
          @media (min-width: 768px) {
            .hero-bg {
              background: linear-gradient(rgba(13, 15, 20, 0.85), rgba(13, 15, 20, 0.95)),
-                         url('/assests/WhatsApp\ Image\ 2025-03-23\ at\ 12.38.53_8cd9b325.jpg') no-repeat center center;
+                         url('https://res.cloudinary.com/dxomzjhhj/image/upload/v1742737482/COSA_2024-25_2_t0qfoy.jpg') no-repeat center center;
              background-size: cover;
              background-attachment: fixed;
            }
